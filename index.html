@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Navbar</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        .navbar-brand img {
+            max-height: 50px;
+        }
+
+        /* Ensure mobile menu is hidden by default */
+        #mobile-menu {
+            display: none;
+        }
+
+        /* Adjust mobile menu display on small screens */
+        @media (max-width: 768px) {
+            #mobile-menu {
+                display: block;
+            }
+            .nav{
+            background-color: white;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-slate-800">
+    <nav class="bg-white  shadow">
+        <div class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="navbar-brand">
+                <img src="https://marketplace.canva.com/EAFpeiTrl4c/1/0/1600w/canva-abstract-chef-cooking-restaurant-free-logo-9Gfim1S8fHg.jpg" alt="Restaurant Logo">
+            </div>
+            <!-- Navigation Links -->
+            <ul class="hidden md:flex space-x-4">
+                <li><a href="#" class="hover:text-gray-300">Menu</a></li>
+                <li><a href="#" class="hover:text-gray-300">Reservations</a></li>
+                <li><a href="#" class="hover:text-gray-300">About Us</a></li>
+                <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+            </ul>
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden" id="mobile-menu-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden bg-white-800" id="mobile-menu">
+            <ul class="hidden md:flex space-x-4" id="nav-links">
+                <li><a href="#" class="hover:text-gray-300">Menu</a></li>
+                <li><a href="#" class="hover:text-gray-300">Reservations</a></li>
+                <li><a href="#" class="hover:text-gray-300">About Us</a></li>
+                <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+            </ul>
+            
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleButton = document.getElementById('mobile-menu-toggle');
+            const navLinks = document.getElementById('nav-links');
+    
+            toggleButton.addEventListener('click', function () {
+                navLinks.classList.toggle('hidden');
+            });
+        });
+    </script>
+    
+    
+    
+
+<body class="bg-gray-100 dark:bg-slate-800">
+    <div class="flex h-screen justify-center items-center">
+        <div class="mx-auto mt-10 flex justify-center px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-slate-200 sm:text-5xl md:text-6xl">
+                    <span class="block xl:inline">Welcome to</span>
+                    <span class="block xl:inline mt-1 mb-2 text-indigo-600 dark:text-indigo-400 text-6xl font-bold">Salt-N-Peper</span>
+                </h1>
+                <p class="mx-auto mt-3 max-w-xl text-lg text-gray-500 dark:text-slate-400 sm:mt-5 md:mt-5">
+                    Indulge in a culinary journey like no other, where every bite tells a story of flavor and tradition.
+                </p>
+                <div class="mt-5 sm:mt-8 sm:flex sm:justify-center">
+                    <div class="rounded-md shadow">
+                        <a href="#" class="flex w-full items-center justify-center rounded-md border border-transparent bg-blue-600 px-8 py-3 text-base font-medium text-white hover:bg-blue-700 md:py-4 md:px-10 md:text-lg">
+                            Book a Table 🍽️
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Discover Our Features</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Elevate Your Dining Experience
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Explore the unique features that make Salt n Pepper the perfect destination for food enthusiasts.
+                </p>
+            </div>
+
+            <div class="mt-20 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Feature 1 -->
+                <div class="p-8 bg-white border border-gray-200 rounded-lg shadow-md">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                        <!-- Icon -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 11.758c-1.841-2.262-4.344-3.605-7-3.605-1.354 0-2.63.343-3.743.947L3 7.703l2.303 2.855C6.284 11.374 7.61 11.758 8.963 11.758c.853 0 1.676-.24 2.412-.656L15 12.782l1.626-1.122c.736.416 1.56.656 2.412.656 1.318 0 2.514-.528 3.375-1.387C21.842 9.598 22 10.435 22 11.355c0 .855-.158 1.645-.425 2.355zM13 21v-3M13 11V3"></path>
+                        </svg>
+                    </div>
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">Global Cuisine</h3>
+                    <p class="mt-2 text-base text-gray-500">
+                        Experience a diverse range of global cuisines crafted by our expert chefs.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-8 bg-white border border-gray-200 rounded-lg shadow-md">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                        <!-- Icon -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7"></path>
+                        </svg>
+                    </div>
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">Outdoor Seating</h3>
+                    <p class="mt-2 text-base text-gray-500">
+                        Enjoy your meal in our spacious outdoor seating area, surrounded by lush greenery.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-8 bg-white border border-gray-200 rounded-lg shadow-md">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                        <!-- Icon -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 11.758c-1.841-2.262-4.344-3.605-7-3.605-1.354 0-2.63.343-3.743.947L3 7.703l2.303 2.855C6.284 11.374 7.61 11.758 8.963 11.758c.853 0 1.676-.24 2.412-.656L15 12.782l1.626-1.122c.736.416 1.56.656 2.412.656 1.318 0 2.514-.528 3.375-1.387C21.842 9.598 22 10.435 22 11.355c0 .855-.158 1.645-.425 2.355zM13 21v-3M13 11V3"></path>
+                        </svg>
+                    </div>
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">Family Friendly</h3>
+                    <p class="mt-2 text-base text-gray-500">
+                        Bring your whole family and enjoy a welcoming atmosphere suitable for all ages.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="p-8 bg-white border border-gray-200 rounded-lg shadow-md">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                        <!-- Icon -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 11.758c-1.841-2.262-4.344-3.605-7-3.605-1.354 0-2.63.343-3.743.947L3 7.703l2.303 2.855C6.284 11.374 7.61 11.758 8.963 11.758c.853 0 1.676-.24 2.412-.656L15 12.782l1.626-1.122c.736.416 1.56.656 2.412.656 1.318 0 2.514-.528 3.375-1.387C21.842 9.598 22 10.435 22 11.355c0 .855-.158 1.645-.425 2.355zM13 21v-3M13 11V3"></path>
+                        </svg>
+                    </div>
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">Live Music</h3>
+                    <p class="mt-2 text-base text-gray-500">
+                        Enjoy live music performances while savoring your favorite dishes.
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="p-8 bg-white border border-gray-200 rounded-lg shadow-md">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                        <!-- Icon -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7"></path>
+                        </svg>
+                    </div>
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">Scenic Views</h3>
+                    <p class="mt-2 text-base text-gray-500">
+                        Dine with breathtaking views of the surrounding landscape.
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="p-8 bg-white border border-gray-200 rounded-lg shadow-md">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                        <!-- Icon -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7"></path>
+                        </svg>
+                    </div>
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">Private Dining</h3>
+                    <p class="mt-2 text-base text-gray-500">
+                        Experience intimate dining in our exclusive private dining spaces.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="process-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Our Process</h2>
+                <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">From Kitchen to Table</h3>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Discover how we craft each dish with passion and precision to create a memorable dining experience.
+                </p>
+            </div>
+            <div class="mt-20 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Process Step 1 -->
+                <div class="p-8 bg-white border border-gray-200 rounded-lg shadow-md">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                        <!-- Icon -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7"></path>
+                        </svg>
+                    </div>
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">Fresh Ingredients</h3>
+                    <p class="mt-2 text-base text-gray-500">
+                        We source the finest and freshest ingredients to ensure the highest quality in every dish.
+                    </p>
+                </div>
+                <!-- Process Step 2 -->
+                <div class="p-8 bg-white border border-gray-200 rounded-lg shadow-md">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                        <!-- Icon -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7"></path>
+                        </svg>
+                    </div>
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">Expert Preparation</h3>
+                    <p class="mt-2 text-base text-gray-500">
+                        Our chefs meticulously prepare each dish with expertise and care, ensuring perfection in every bite.
+                    </p>
+                </div>
+                <!-- Process Step 3 -->
+                <div class="p-8 bg-white border border-gray-200 rounded-lg shadow-md">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                        <!-- Icon -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7"></path>
+                        </svg>
+                    </div>
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">Impeccable Presentation</h3>
+                    <p class="mt-2 text-base text-gray-500">
+                        Each dish is elegantly presented to delight both the eyes and the palate, creating a memorable dining experience.
+                    </p>
+                </div>
+                <!-- Process Step 4 -->
+                <div class="p-8 bg-white border border-gray-200 rounded-lg shadow-md">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                        <!-- Icon -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7"></path>
+                        </svg>
+                    </div>
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">Flavor Fusion</h3>
+                    <p class="mt-2 text-base text-gray-500">
+                        We combine diverse flavors and culinary traditions to create unique and unforgettable taste experiences.
+                    </p>
+                </div>
+                <!-- Process Step 5 -->
+                <div class="p-8 bg-white border border-gray-200 rounded-lg shadow-md">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                        <!-- Icon -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7"></path>
+                        </svg>
+                    </div>
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">Artful Plating</h3>
+                    <p class="mt-2 text-base text-gray-500">
+                        Our dishes are meticulously plated to enhance visual appeal and elevate the dining experience.
+                    </p>
+                </div>
+                <!-- Process Step 6 -->
+                <div class="p-8 bg-white border border-gray-200 rounded-lg shadow-md">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                        <!-- Icon -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7"></path>
+                        </svg>
+                    </div>
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">Customer Satisfaction</h3>
+                    <p class="mt-2 text-base text-gray-500">
+                        We prioritize customer satisfaction and strive to exceed expectations with every dish served.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900">Specialty Dishes</h2>
+                <p class="mt-4 text-lg text-gray-600">Discover our chef's masterpieces</p>
+            </div>
+            <div class="mt-16 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Dish 1 -->
+                <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                    <div class="flex-shrink-0">
+                        <img class="h-64 w-full object-cover" src="data:image/jpeg;base64,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" alt="Dish 1">
+                    </div>
+                    <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold text-gray-900">Signature Pasta</h3>
+                            <p class="mt-3 text-base text-gray-500">Delicious pasta made with fresh ingredients and our secret sauce.</p>
+                        </div>
+                        <div class="mt-6">
+                            <a href="#" class="block w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-center font-medium text-white bg-indigo-600 hover:bg-indigo-700">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dish 2 -->
+                <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                    <div class="flex-shrink-0">
+                        <img class="h-64 w-full object-cover" src="https://www.cottagedelight.co.uk/wp-content/uploads/2021/01/Classic-Burger-gourmet-Burger-Sauce.jpg" alt="Dish 2">
+                    </div>
+                    <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold text-gray-900">Gourmet Burger</h3>
+                            <p class="mt-3 text-base text-gray-500">Juicy burger with premium beef, topped with melted cheese and crispy bacon.</p>
+                        </div>
+                        <div class="mt-6">
+                            <a href="#" class="block w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-center font-medium text-white bg-indigo-600 hover:bg-indigo-700">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dish 3 -->
+                <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                    <div class="flex-shrink-0">
+                        <img class="h-64 w-full object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtosB4bs_18ggj2gInpYUJZvFNMm3gvy_AwXvm-kohDA&s" alt="Dish 3">
+                    </div>
+                    <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold text-gray-900">Seafood Platter</h3>
+                            <p class="mt-3 text-base text-gray-500">A delightful assortment of fresh seafood served with tangy sauces.</p>
+                        </div>
+                        <div class="mt-6">
+                            <a href="#" class="block w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-center font-medium text-white bg-indigo-600 hover:bg-indigo-700">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Special Events -->
+<section class="py-16 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <h2 class="text-3xl font-extrabold text-gray-900">Special Events</h2>
+            <p class="mt-4 text-lg text-gray-600">Discover our upcoming events and promotions</p>
+        </div>
+        <div class="mt-16 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Event 1 -->
+            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                <div class="flex-shrink-0 bg-indigo-600 px-6 py-4">
+                    <p class="text-white font-semibold">Live Music Night</p>
+                </div>
+                <div class="bg-white p-6 flex flex-col justify-between">
+                    <div class="flex-1">
+                        <p class="mt-3 text-base text-gray-500">Join us this Friday for an evening of live music performed by local artists. Enjoy great food, drinks, and music!</p>
+                    </div>
+                    <div class="mt-6">
+                        <a href="#" class="block w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-center font-medium text-white bg-indigo-600 hover:bg-indigo-700">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Event 2 -->
+            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                <div class="flex-shrink-0 bg-indigo-600 px-6 py-4">
+                    <p class="text-white font-semibold">Weekend Brunch Special</p>
+                </div>
+                <div class="bg-white p-6 flex flex-col justify-between">
+                    <div class="flex-1">
+                        <p class="mt-3 text-base text-gray-500">Indulge in our delicious weekend brunch menu with special discounts on mimosas and bloody marys. Available every Saturday and Sunday!</p>
+                    </div>
+                    <div class="mt-6">
+                        <a href="#" class="block w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-center font-medium text-white bg-indigo-600 hover:bg-indigo-700">View Menu</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Event 3 -->
+            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                <div class="flex-shrink-0 bg-indigo-600 px-6 py-4">
+                    <p class="text-white font-semibold">Wine Tasting Evening</p>
+                </div>
+                <div class="bg-white p-6 flex flex-col justify-between">
+                    <div class="flex-1">
+                        <p class="mt-3 text-base text-gray-500">Experience an exclusive wine tasting event featuring a curated selection of fine wines from around the world. Limited tickets available!</p>
+                    </div>
+                    <div class="mt-6">
+                        <a href="#" class="block w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-center font-medium text-white bg-indigo-600 hover:bg-indigo-700">Reserve Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Meet Our Team -->
+<section class="py-16 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <h2 class="text-3xl font-extrabold text-gray-900">Meet Our Team</h2>
+            <p class="mt-4 text-lg text-gray-600">Get to know the people behind the scenes!</p>
+        </div>
+        <div class="mt-16 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Team Member 1 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img class="h-64 w-full object-cover" src="https://media.graphassets.com/resize=fit:crop,width:1280,height:660/aKR4mEdrQtu8HrepE66M" alt="Team Member 1">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-900">John Doe</h3>
+                    <p class="mt-2 text-base text-gray-500">Head Chef</p>
+                </div>
+            </div>
+            <!-- Team Member 2 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img class="h-64 w-full object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzAoPFAe2Y7x8kvsrd0F9CXmwQW-kG1SxZNV9fDHZDeA&s" alt="Team Member 2">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-900">Jane Smith</h3>
+                    <p class="mt-2 text-base text-gray-500">Restaurant Manager</p>
+                </div>
+            </div>
+            <!-- Team Member 3 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img class="h-64 w-full object-cover" src="https://www.stryx.com/cdn/shop/articles/man-looking-attractive.jpg?v=1666662774" alt="Team Member 3">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-900">Alex Johnson</h3>
+                    <p class="mt-2 text-base text-gray-500">Sous Chef</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Sustainability -->
+<section class="py-16 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <h2 class="text-3xl font-extrabold text-gray-900">Sustainability</h2>
+            <p class="mt-4 text-lg text-gray-600">Learn about our commitment to the environment and sustainable practices.</p>
+        </div>
+        <div class="mt-16 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Eco-Friendly Practice 1 -->
+            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                <div class="flex-shrink-0">
+                    <img class="h-64 w-full object-cover" src="https://static.vecteezy.com/system/resources/previews/029/605/853/original/local-sourcing-and-handcrafted-beauty-embrace-locally-sourced-and-handcrafted-beauty-essentials-supporting-artisans-and-sustainability-vector.jpg" alt="Eco-Friendly Practice 1">
+                </div>
+                <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold text-gray-900">Local Sourcing</h3>
+                        <p class="mt-3 text-base text-gray-500">We prioritize sourcing ingredients from local suppliers to reduce carbon footprint.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Eco-Friendly Practice 2 -->
+            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                <div class="flex-shrink-0">
+                    <img class="h-64 w-full object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq5hjUCaTQdwUngd2c2FMvgpEdRecVoA3m-GC5fZChIQ&s" alt="Eco-Friendly Practice 2">
+                </div>
+                <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold text-gray-900">Waste Reduction</h3>
+                        <p class="mt-3 text-base text-gray-500">We minimize food waste through careful portioning and composting.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Eco-Friendly Practice 3 -->
+            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                <div class="flex-shrink-0">
+                    <img class="h-64 w-full object-cover" src="https://www.wtsenergy.com/wp-content/uploads/2024/03/1668773828119.png" alt="Eco-Friendly Practice 3">
+                </div>
+                <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold text-gray-900">Energy Efficiency</h3>
+                        <p class="mt-3 text-base text-gray-500">We use energy-efficient appliances and lighting to reduce our energy consumption.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="relative w-full bg-white px-6 pt-10 pb-8 mt-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10">
+    <div class="mx-auto px-5">
+        <div class="flex flex-col items-center">
+            <h2 class="mt-5 text-center text-3xl font-bold tracking-tight md:text-5xl">FAQ</h2>
+            <p class="mt-3 text-lg text-neutral-500 md:text-xl">Frequently asked questions about our restaurant</p>
+        </div>
+        <div class="mx-auto mt-8 grid max-w-xl divide-y divide-neutral-200">
+            <div class="py-5">
+                <details class="group">
+                    <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                        <span>What are your opening hours?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <p class="group-open:animate-fadeIn mt-3 text-neutral-600">Our restaurant is open from [insert opening hours here] every day of the week.</p>
+                </details>
+            </div>
+            <div class="py-5">
+                <details class="group">
+                    <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                        <span>Do you offer delivery or takeout?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <p class="group-open:animate-fadeIn mt-3 text-neutral-600">Yes, we offer both delivery and takeout services. You can place your order online or by calling us.</p>
+                </details>
+            </div>
+            <div class="py-5">
+                <details class="group">
+                    <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                        <span>What payment methods do you accept?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <p class="group-open:animate-fadeIn mt-3 text-neutral-600">We accept cash, credit/debit cards, and certain mobile payment apps.</p>
+                </details>
+            </div>
+            <div class="py-5">
+                <details class="group">
+                    <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                        <span>Do you accommodate dietary restrictions?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <p class="group-open:animate-fadeIn mt-3 text-neutral-600">Yes, we offer options for various dietary restrictions, including vegetarian, vegan, gluten-free, and more. Please inform our staff about your requirements.</p>
+                </details>
+            </div>
+            <div class="py-5">
+                <details class="group">
+                    <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                        <span>Can I make reservations?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <p class="group-open:animate-fadeIn mt-3 text-neutral-600">Yes, we recommend making a reservation, especially during busy times, to ensure we can accommodate you.</p>
+                </details>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<footer class="bg-white shadow-lg">
+    <div class="container mx-auto py-12 px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- About Us -->
+            <div>
+                <h2 class="text-gray-900 text-lg font-semibold mb-4">About Us</h2>
+                <p class="text-gray-600">Learn more about our restaurant and our commitment to quality dining experiences.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h2 class="text-gray-900 text-lg font-semibold mb-4">Quick Links</h2>
+                <ul>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-900">Home</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-900">Menu</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-900">Reservations</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-900">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Media -->
+            <div>
+                <h2 class="text-gray-900 text-lg font-semibold mb-4">Follow Us</h2>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="border-t border-gray-200 mt-8 pt-8 text-gray-600 text-center">
+            <p>&copy; 2024 Chef Master. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
